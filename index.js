@@ -159,7 +159,7 @@ class JorenComponent extends LitElement {
   }
 
   async fetchTransactions() {
-    const response = await fetch('./transactions.json');
+    const response = await fetch(new URL('./transactions.json', import.meta.url));
     if (response.status === 200) {
       const data = await response.json();
       this.list = data;
