@@ -1,0 +1,24 @@
+{
+  "name": "budget-list-lit",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "web-dev-server --open --watch --node-resolve"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "lit-element": "^2.4.0"
+  },
+  "prettier": {
+    "arrowParens": "always",
+    "trailingComma": "all",
+    "printWidth": 100,
+    "singleQuote": true
+  },
+  "devDependencies": {
+    "@web/dev-server": "^0.0.19"
+  }
+}
