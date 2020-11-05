@@ -45,6 +45,32 @@ class JorenComponent extends LitElement {
         margin: 10px 0;
         border-radius: 5px;
       }
+
+      form {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 50px;
+      }
+
+      .form-group {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .radio {
+        display: flex;
+        width: 100px;
+        justify-content: space-between;
+      }
+
+      input[type='number'] {
+        width: 70px;
+      }
+
+      input[type='text'] {
+        width: 120px;
+      }
     `;
   }
 
@@ -76,6 +102,25 @@ class JorenComponent extends LitElement {
       <div class="budget__bar">
         <div class="budget__bar-fill"></div>
       </div>
+      <form>
+        <div class="radio-group">
+          <div class="radio">
+            <label for="input-type-expense">Expense</label>
+            <input id="input-type-expense" name="input-type" type="radio" checked />
+          </div>
+          <div class="radio">
+            <label for="input-type-income">Income</label>
+            <input id="input-type-income" name="input-type" type="radio" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Name</label>
+          <input type="text" name="name" />
+          <label>Amount</label>
+          <input type="number" name="amount" />
+        </div>
+        <button @click=${this.submitForm}>+</button>
+      </form>
       <ul class="transaction-list">
         ${this.list.map(
           (item) => html`
@@ -116,6 +161,18 @@ class JorenComponent extends LitElement {
       : 0;
 
     this.budgetLeft = totalIncomes - totalExpenses;
+  }
+
+  submitForm(ev) {
+    ev.preventDefault();
+    const formElems = this.shadowRoot.querySelector('form').elements;
+    const amount = parseFloat(formElems['amount'].value);
+    const name = formElems['name'].value;
+    const expense = formElems['input-type-expense'].checked;
+    if (!amount || !name) {
+      return;
+    }
+    this.list = [{ amount, name, expense }, ...this.list];
   }
 }
 customElements.define('joren-component', JorenComponent);
