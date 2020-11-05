@@ -11,9 +11,6 @@ class JorenComponent extends LitElement {
       list: {
         attribute: false,
       },
-      totalBudget: {
-        attribute: false,
-      },
       budgetLeft: {
         attribute: false,
       },
@@ -53,7 +50,6 @@ class JorenComponent extends LitElement {
 
   constructor() {
     super();
-    this.totalBudget = 2000;
     this.title = 'Budget List';
     this.list = [];
   }
@@ -64,7 +60,7 @@ class JorenComponent extends LitElement {
   }
 
   updated(changedProperties) {
-    if (changedProperties.has('list') || changedProperties.has('totalBudget')) {
+    if (changedProperties.has('list')) {
       this.recalculateBudget();
     }
   }
@@ -86,6 +82,7 @@ class JorenComponent extends LitElement {
             <li class="item">
               <div class="item__name">${item.name}</div>
               <div class="item__amount">
+                ${item.expense ? '-' : '+'}
                 ${new Intl.NumberFormat('nl-NL', { style: 'currency', currency: 'EUR' }).format(
                   item.amount,
                 )}
@@ -107,10 +104,18 @@ class JorenComponent extends LitElement {
 
   recalculateBudget() {
     const totalExpenses = this.list.length
-      ? this.list.reduce((acc, expense) => (acc += expense.amount), 0)
+      ? this.list
+          .filter((item) => item.expense)
+          .reduce((acc, expense) => (acc += expense.amount), 0)
       : 0;
 
-    this.budgetLeft = this.totalBudget - totalExpenses;
+    const totalIncomes = this.list.length
+      ? this.list
+          .filter((item) => !item.expense)
+          .reduce((acc, expense) => (acc += expense.amount), 0)
+      : 0;
+
+    this.budgetLeft = totalIncomes - totalExpenses;
   }
 }
 customElements.define('joren-component', JorenComponent);
