@@ -24,11 +24,30 @@ class JorenComponent extends LitElement {
         display: block;
         width: max-content;
         margin: 0 auto;
+        --bar-color: hsl(0, 50%, 70%);
+        --bar-color-fill: hsl(0, 50%, 50%);
+        --bar-width: 400px;
       }
 
       h1,
       h2 {
         text-align: center;
+      }
+
+      .budget__bar {
+        position: relative;
+        height: 10px;
+        width: 400px;
+        border-radius: 4px;
+        background-color: var(--bar-color);
+        margin-bottom: 50px;
+      }
+      .budget__bar-fill {
+        position: absolute;
+        height: 10px;
+        width: var(--bar-width);
+        border-radius: 4px;
+        background-color: var(--bar-color-fill);
       }
 
       .transaction-list {
@@ -161,6 +180,12 @@ class JorenComponent extends LitElement {
       : 0;
 
     this.budgetLeft = totalIncomes - totalExpenses;
+
+    const percentageLeft = Math.max((100 / totalIncomes) * this.budgetLeft, 0);
+    const barWidth = Math.max((400 / 100) * percentageLeft, 0);
+    this.style.setProperty('--bar-width', `${barWidth}px`);
+    this.style.setProperty('--bar-color', `hsl(${percentageLeft}, 50%, 70%)`);
+    this.style.setProperty('--bar-color-fill', `hsl(${percentageLeft}, 50%, 50%)`);
   }
 
   submitForm(ev) {
