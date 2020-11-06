@@ -1,18 +1,42 @@
 [
   {
     "name": "Car repair",
-    "amount": 500
+    "amount": 500,
+    "type": "expense"
   },
   {
     "name": "Groceries",
-    "amount": 47
+    "amount": 47,
+    "type": "expense"
   },
   {
     "name": "Restaurant dinner",
-    "amount": 128
+    "amount": 128,
+    "type": "expense"
   },
   {
     "name": "Toothpaste",
-    "amount": 3.8
+    "amount": 3.8,
+    "type": "expense"
+  },
+  {
+    "name": "Birthday gift",
+    "amount": 30,
+    "type": "income"
+  },
+  {
+    "name": "Income",
+    "amount": 750,
+    "type": "income"
+  },
+  {
+    "name": "Scratch card earnings",
+    "amount": 7.5,
+    "type": "income"
+  },
+  {
+    "name": "Pokering",
+    "amount": 20,
+    "type": "income"
   }
 ]
