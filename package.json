@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "web-dev-server --open --watch --node-resolve",
-    "build": "rimraf dist && rollup -c rollup.config.js",
-    "start:prod": "cd dist && http-server -c-1 -o"
+    "start": "cwk run",
+    "scaffold": "cwk scaffold",
+    "key": "cwk generate-key"
   },
   "keywords": [],
   "author": "",
@@ -21,10 +21,6 @@
     "singleQuote": true
   },
   "devDependencies": {
-    "@rollup/plugin-node-resolve": "^8.4.0",
-    "@web/dev-server": "^0.0.19",
-    "@web/rollup-plugin-html": "^1.2.0",
-    "@web/rollup-plugin-import-meta-assets": "^1.0.4",
-    "rimraf": "^3.0.2"
+    "code-workshop-kit": "^0.13.2"
   }
 }

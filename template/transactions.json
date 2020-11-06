@@ -1,0 +1,18 @@
+[
+  {
+    "name": "Car repair",
+    "amount": 500
+  },
+  {
+    "name": "Groceries",
+    "amount": 47
+  },
+  {
+    "name": "Restaurant dinner",
+    "amount": 128
+  },
+  {
+    "name": "Toothpaste",
+    "amount": 3.8
+  }
+]
