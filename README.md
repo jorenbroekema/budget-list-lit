@@ -38,3 +38,16 @@ Now we should add a little form so we can add transactions.
 3. Start with just the width of the bar to align with percentage left
 4. Make sure it's visually clear what the total width is vs the width leftover
 5. Be stylish! Make the bar change color the fuller / emptier it is
+
+## Add filter buttons
+
+1. Add a button to filter only expenses
+2. Add a button to filter only incomes
+3. Add a button to filter none
+4. Change your render method or budget items property to make sure the right items get rendered depending on the filters
+5. Make the leftover budget be calculated based on which items are shown
+
+## Bonus exercises
+
+1. Use localStorage to store items on client side
+2. Be creative!

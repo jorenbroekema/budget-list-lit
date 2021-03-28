@@ -2,26 +2,21 @@
   {
     "name": "Car repair",
     "amount": 500,
-    "expense": true
+    "transactiontype": "income"
   },
   {
     "name": "Groceries",
     "amount": 47,
-    "expense": true
-  },
-  {
-    "name": "Salary",
-    "amount": 2000,
-    "expense": false
+    "transactiontype": "income"
   },
   {
     "name": "Restaurant dinner",
     "amount": 128,
-    "expense": true
+    "transactiontype": "expense"
   },
   {
     "name": "Toothpaste",
     "amount": 3.8,
-    "expense": true
+    "transactiontype": "expense"
   }
 ]

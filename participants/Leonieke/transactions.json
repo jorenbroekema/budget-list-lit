@@ -8,7 +8,7 @@
     "amount": 47
   },
   {
-    "name": "<%= transaction %>",
+    "name": "Restaurant dinner",
     "amount": 128
   },
   {

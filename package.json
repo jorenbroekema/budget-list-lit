@@ -18,9 +18,10 @@
     "arrowParens": "always",
     "trailingComma": "all",
     "printWidth": 100,
-    "singleQuote": true
+    "singleQuote": true,
+    "tabWidth": 2
   },
   "devDependencies": {
-    "code-workshop-kit": "^0.13.2"
+    "code-workshop-kit": "^1.0.4"
   }
 }
