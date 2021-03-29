@@ -1,0 +1,27 @@
+[
+  {
+    "name": "Car repair",
+    "amount": 500,
+    "type": "expense"
+  },
+  {
+    "name": "Salary",
+    "amount": 1234,
+    "type": "income"
+  },
+  {
+    "name": "Groceries",
+    "amount": 47,
+    "type": "expense"
+  },
+  {
+    "name": "Restaurant dinner",
+    "amount": 128,
+    "type": "expense"
+  },
+  {
+    "name": "Toothpaste",
+    "amount": 3.8,
+    "type": "expense"
+  }
+]

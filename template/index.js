@@ -1,6 +1,9 @@
-import { html, LitElement } from 'lit-element';
+class <%= participantWithoutLastname %>CounterComponent extends HTMLElement {
+  connectedCallback() {
+    this.innerHTML = `<h1>Hello, <%= participantName %>!</h1>`;
+  }
+}
 
-class <%= participantName %>Component extends LitElement {}
-customElements.define('<%= participantNameLower %>-component', <%= participantName %>Component);
+customElements.define('<%= participantNameLowerWithoutLastName %>-counter-component', <%= participantWithoutLastname %>CounterComponent);
 
-export default html`<<%= participantNameLower %>-component></<%= participantNameLower %>-component>`;
+export default `<<%= participantNameLowerWithoutLastName %>-counter-component></<%= participantNameLowerWithoutLastName %>-counter-component>`;

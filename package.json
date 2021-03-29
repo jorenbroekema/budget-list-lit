@@ -22,6 +22,6 @@
     "tabWidth": 2
   },
   "devDependencies": {
-    "code-workshop-kit": "^1.0.4"
+    "code-workshop-kit": "^2.0.3"
   }
 }

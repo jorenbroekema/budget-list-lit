@@ -1,13 +1,28 @@
 export default {
-  participants: ['Joren', 'Pascal', 'Leonieke', 'Diana', 'Marius', 'Matias', 'Mihnea', 'Robert'],
+  participants: [
+    'Bartosz Starakiewicz',
+    'Chayanika Khatua',
+    'Ekaterina',
+    'Joren Broekema',
+    'Meijer, J. (Joke)',
+    'Nusse, B. (Bertram)',
+    'Sukh',
+    'Vlad',
+    'mfluit',
+    'onkar75',
+    '\u0218erb\u0103nescu, V.N. (Vlad)',
+  ],
   templateData: {
     participantNameLower() {
       return this.participantName.toLowerCase();
     },
-    transaction() {
-      return this.participantName === 'DannyEngelman'
-        ? 'Vriendenkring overtuigen over te stappen naar Rabo'
-        : 'Restaurant dinner';
+
+    participantNameLowerWithoutLastName() {
+      return this.participantName.toLowerCase().split(' ')[0];
+    },
+
+    participantWithoutLastname() {
+      return this.participantName.split(' ')[0];
     },
   },
   targetOptions: {
