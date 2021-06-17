@@ -121,7 +121,7 @@ class JorenComponent extends LitElement {
       <div class="budget__bar">
         <div class="budget__bar-fill"></div>
       </div>
-      <form>
+      <form @submit=${this.submitForm}>
         <div class="radio-group">
           <div class="radio">
             <label for="input-type-expense">Expense</label>
@@ -138,7 +138,7 @@ class JorenComponent extends LitElement {
           <label>Amount</label>
           <input type="number" name="amount" />
         </div>
-        <button @click=${this.submitForm}>+</button>
+        <button>+</button>
       </form>
       <ul class="transaction-list">
         ${this.list.map(
@@ -190,7 +190,7 @@ class JorenComponent extends LitElement {
 
   submitForm(ev) {
     ev.preventDefault();
-    const formElems = this.shadowRoot.querySelector('form').elements;
+    const formElems = ev.target.elements;
     const amount = parseFloat(formElems['amount'].value);
     const name = formElems['name'].value;
     const expense = formElems['input-type-expense'].checked;
