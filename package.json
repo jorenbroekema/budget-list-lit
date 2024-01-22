@@ -2,7 +2,6 @@
   "name": "budget-list-lit",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "start": "web-dev-server --open --watch --node-resolve",
     "build": "rimraf dist && rollup -c rollup.config.js",
@@ -10,9 +9,9 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
-    "lit": "^2.0.0-rc.2"
+    "lit": "^3.1.1"
   },
   "prettier": {
     "arrowParens": "always",
@@ -21,10 +20,8 @@
     "singleQuote": true
   },
   "devDependencies": {
-    "@rollup/plugin-node-resolve": "^8.4.0",
-    "@web/dev-server": "^0.0.19",
-    "@web/rollup-plugin-html": "^1.2.0",
-    "@web/rollup-plugin-import-meta-assets": "^1.0.4",
-    "rimraf": "^3.0.2"
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "http-server": "^14.1.1",
+    "rimraf": "^5.0.5"
   }
 }

@@ -1,6 +1,6 @@
-import { css, html, LitElement } from 'lit-element';
+import { css, html, LitElement } from 'lit';
 
-class JorenComponent extends LitElement {
+class BudgetList extends LitElement {
   static get properties() {
     return {
       title: {
@@ -9,10 +9,10 @@ class JorenComponent extends LitElement {
         attribute: 'my-title',
       },
       list: {
-        attribute: false,
+        state: true,
       },
       budgetLeft: {
-        attribute: false,
+        state: true,
       },
     };
   }
@@ -20,7 +20,7 @@ class JorenComponent extends LitElement {
   static get styles() {
     return css`
       :host {
-        font-family: Roboto Slab, sans-serif;
+        font-family: 'Roboto Slab', sans-serif;
         display: block;
         width: max-content;
         margin: 0 auto;
@@ -200,4 +200,4 @@ class JorenComponent extends LitElement {
     this.list = [{ amount, name, expense }, ...this.list];
   }
 }
-customElements.define('joren-component', JorenComponent);
+customElements.define('budget-list', BudgetList);
