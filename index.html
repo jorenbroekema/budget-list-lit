@@ -4,9 +4,34 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <script type="module" src="./index.js"></script>
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <budget-list my-title="Awesome Budget List"></budget-list>
-    <script type="module" src="./index.js"></script>
+    <h1>Awesome Budget List</h1>
+    <h2 class="budget"></h2>
+    <div class="budget__bar">
+      <div class="budget__bar-fill"></div>
+    </div>
+    <form id="transaction-form">
+      <div class="radio-group">
+        <div class="radio">
+          <label for="input-type-expense">Expense</label>
+          <input id="input-type-expense" name="input-type" type="radio" checked />
+        </div>
+        <div class="radio">
+          <label for="input-type-income">Income</label>
+          <input id="input-type-income" name="input-type" type="radio" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="input-name">Name</label>
+        <input id="input-name" type="text" name="name" />
+        <label for="input-amount">Amount</label>
+        <input id="input-amount" type="number" name="amount" />
+      </div>
+      <button>+</button>
+    </form>
+    <ul class="transaction-list"></ul>
   </body>
 </html>
