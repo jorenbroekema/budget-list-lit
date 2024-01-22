@@ -133,10 +133,10 @@ class BudgetList extends LitElement {
           </div>
         </div>
         <div class="form-group">
-          <label>Name</label>
-          <input type="text" name="name" />
-          <label>Amount</label>
-          <input type="number" name="amount" />
+          <label for="input-name">Name</label>
+          <input id="input-name" type="text" name="name" />
+          <label for="input-amount">Amount</label>
+          <input id="input-amount" type="number" name="amount" />
         </div>
         <button>+</button>
       </form>
