@@ -1,0 +1,71 @@
+:root {
+  font-family: 'Roboto Slab', sans-serif;
+  display: block;
+  width: max-content;
+  margin: 0 auto;
+  --bar-color: hsl(0, 50%, 70%);
+  --bar-color-fill: hsl(0, 50%, 50%);
+  --bar-width: 400px;
+}
+
+h1,
+h2 {
+  text-align: center;
+}
+
+.budget__bar {
+  position: relative;
+  height: 10px;
+  width: 400px;
+  border-radius: 4px;
+  background-color: var(--bar-color);
+  margin-bottom: 50px;
+}
+.budget__bar-fill {
+  position: absolute;
+  height: 10px;
+  width: var(--bar-width);
+  border-radius: 4px;
+  background-color: var(--bar-color-fill);
+}
+
+.transaction-list {
+  list-style: none;
+  padding: 0;
+  margin: 10px auto;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #ddd;
+  margin: 10px 0;
+  border-radius: 5px;
+}
+
+form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.radio {
+  display: flex;
+  width: 100px;
+  justify-content: space-between;
+}
+
+input[type='number'] {
+  width: 70px;
+}
+
+input[type='text'] {
+  width: 120px;
+}
